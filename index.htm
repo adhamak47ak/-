@@ -47,6 +47,10 @@
     <div id="surprise-page" class="page">
         <h1>❤️❤️ أحلى مفاجأة لأجمل إنسانة في حياتي ❤️❤️</h1>
         
+        <button onclick="playMusic()" id="play-music-btn" style="margin-bottom: 20px;">
+            🎶 دوسي هنا لو الأغنية مشتغلتش
+        </button>
+        
         <div class="message-box">
             <p>من أول يوم عرفتك وأنا حاسس إن حياتي بقت أحلى. ضحكتك بتخليني أنسى أي هم، وكلامك بيديني طاقة وحب. إنتِ مش بس جزء من حياتي، إنتِ حياتي كلها. بحبك من قلبي، وهنفضل أحباب طول العمر يا أحلى رحاب! 💖</p>
         </div>
@@ -63,7 +67,8 @@
     </div>
 
     <script>
-        const CORRECT_PASSWORD = "LOVE"; 
+        // *** تم تحديث كلمة السر هنا ***
+        const CORRECT_PASSWORD = "LOVERURU"; 
 
         function playMusic() {
             const music = document.getElementById('background-music');
@@ -71,12 +76,13 @@
         }
 
         function checkPassword() {
+            // الكود هيحول أي حاجة تكتبها لـ كابيتال عشان يقارنها صح
             const passwordInput = document.getElementById('password').value.toUpperCase(); 
             if (passwordInput === CORRECT_PASSWORD) {
                 document.getElementById('password-page').style.display = 'none';
                 document.getElementById('surprise-page').style.display = 'block';
-                playMusic(); // شغل الأغنية
-                startHeartAnimation(); // شغل القلوب
+                playMusic(); // شغل الأغنية (هتشتغل لو المتصفح سمح)
+                startHeartAnimation(); 
             } else {
                 alert('كلمة السر غلط يا عمري! ركزي تاني!');
             }
