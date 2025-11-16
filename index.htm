@@ -36,7 +36,7 @@
 </head>
 <body>
 
-    <audio id="background-music" src="https://audio.com/idris-1837328972296143/audio/arctic-monkeys-i-wanna-be-yours" loop></audio>
+    <audio id="background-music" src="https://cdn.pixabay.com/download/audio/2023/12/28/background-music-200770.mp3" loop></audio>
 
     <div id="password-page" class="page">
         <h2>عشان تشوفي المفاجأة، لازم تكتبي كلمة السر!</h2>
@@ -67,7 +67,7 @@
     </div>
 
     <script>
-        // *** تم تحديث كلمة السر هنا ***
+        // الباسورد الجديد هو LOVERURU
         const CORRECT_PASSWORD = "LOVERURU"; 
 
         function playMusic() {
@@ -76,12 +76,11 @@
         }
 
         function checkPassword() {
-            // الكود هيحول أي حاجة تكتبها لـ كابيتال عشان يقارنها صح
             const passwordInput = document.getElementById('password').value.toUpperCase(); 
             if (passwordInput === CORRECT_PASSWORD) {
                 document.getElementById('password-page').style.display = 'none';
                 document.getElementById('surprise-page').style.display = 'block';
-                playMusic(); // شغل الأغنية (هتشتغل لو المتصفح سمح)
+                playMusic(); 
                 startHeartAnimation(); 
             } else {
                 alert('كلمة السر غلط يا عمري! ركزي تاني!');
